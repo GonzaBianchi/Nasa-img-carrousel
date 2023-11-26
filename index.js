@@ -1,6 +1,4 @@
-// import { crearDivImagenes } from "./createImgDivs.js";
 import { obtenerImagenDeNasa } from "./callService.js";
-// import { mostrarDatos } from "./callService.js";
 import { generarNuevaImg } from "./eventoClickFlechaDer.js";
 import { volverImgAnterior } from "./eventoClickFlechaIzq.js";
 
@@ -36,19 +34,14 @@ boton.addEventListener('click', function(){
     containerImgArrows.appendChild(flechaIzq);
     containerImgArrows.appendChild(imgYTextoContainer);
     imgYTextoContainer.appendChild(imgNasa);
-    // imgYTextoContainer.appendChild(imgNasaContainer);
-    // imgNasaContainer.appendChild(imgNasa);
     imgYTextoContainer.appendChild(tituYDescImg);
     tituYDescImg.appendChild(tituloImg);
     tituYDescImg.appendChild(descripcionImg);
     containerImgArrows.appendChild(flechaDer);
     obtenerImagenDeNasa(array, pos, imgNasa, tituloImg, descripcionImg);
-    // crearDivImagenes(containerImgArrows);
 });
 
 
-// let imgAnterior = document.querySelector(".bx-chevron-left");
-// let siguienteImg = document.querySelector(".bx-chevron-right");
 flechaDer.addEventListener('click', function(){
     generarNuevaImg(array, pos, imgNasa, tituloImg, descripcionImg);
 });

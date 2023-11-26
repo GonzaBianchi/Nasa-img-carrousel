@@ -83,6 +83,8 @@ body{
     justify-content: center;
     border-radius: 1em;
     bottom: 0;
+    width: 50%;
+    max-width: auto;
 }
 
 .imgYTextoContainer .tituYDescImg, .imgYTextoContainer:not(:hover) .tituYDescImg{
@@ -122,7 +124,7 @@ body{
 }
 
 .imgYTextoContainer:hover .tituYDescImg .descripcionImg{
-    transition: font-size .5s, scale 1s;
+    transition: font-size .2s, scale .7s;
     font-size: .8em;
     scale: 1;
     font-weight: 300;
@@ -138,7 +140,7 @@ body{
 .imgYTextoContainer:not(:hover) .tituYDescImg .descripcionImg{
     scale: 0;
     font-size: 0;
-    transition: all 1s;
+    transition: scale 1s, font-size .1s;
 }    
 
 .bx{
@@ -148,24 +150,19 @@ body{
     border-radius: 45%;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
 
-.bx-chevron-left:hover{
-    /* transform: translateX(-0.1em); */
-    transition: 300ms;
+.bx-chevron-left:hover, .bx-chevron-right:hover{
+    transition: 1s;
     border-radius: 45%;
     background-color: #2e2d2d;
-    border: 5px double #f5f5f5;
     color: lightgray;
 }
 
-.bx-chevron-right:hover{
-    /* transform: translateX(0.1em); */
-    transition: 300ms;
-    background-color: #2e2d2d;
-    border: 5px double #f5f5f5;
-    color: lightgray;
+.bx-chevron-left:not(:hover), .bx-chevron-right:not(:hover){
+    transition: .5s;
+    background-color: transparent;
+    color: #000000;
 }
-
-
 

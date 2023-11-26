@@ -1,8 +1,7 @@
 import { guardarImgEnArray } from "./saveImgOnArray.js";
-import { ImagenHtml } from "./ImagenHtml.js";
 
 export function obtenerImagenDeNasa(array, pos, imgNasa, tituloImg, descripcionImg) {
-  const api_key = 'n1GNgbOiXkB32ksqA0PF7WJC9CLA1dPbMfOfcYjY'; // Coloca aquí tu API Key de la NASA
+  const api_key = 'n1GNgbOiXkB32ksqA0PF7WJC9CLA1dPbMfOfcYjY';
 
     const url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}&count=1`;
 
@@ -19,13 +18,6 @@ export function obtenerImagenDeNasa(array, pos, imgNasa, tituloImg, descripcionI
 
 export function mostrarDatos(array, pos, imgNasa, tituloImg, descripcionImg){
     console.log("esto es la funcion de mostrar datos: ", array[pos.posicion]);
-    
-    // let imagenHtml = new ImagenHtml(array[pos.posicion]);
-
-    // return imagenHtml;
-    // imagenNasa = document.querySelector(".imgNasa");
-    // tituloImgNasa = document.querySelector(".tituloImg");
-    // descripcionImgNasa = document.querySelector(".descripcionImg");
 
     imgNasa.src = array[pos.posicion].url;
     tituloImg.innerHTML = array[pos.posicion].title;
